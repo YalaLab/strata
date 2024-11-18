@@ -1,0 +1,39 @@
+data:
+  train_set_data_path: example_data/train_0.8_0.1_0.1_0.csv
+  val_set_data_path: example_data/test_0.8_0.1_0.1_0.csv
+  test_set_data_path: example_data/test_0.8_0.1_0.1_0.csv
+  questions: ["source", "cancer"] # Questions to include from the template
+  start_idx: 0 # Index of data to begin from, used only for test and inference
+  end_idx: null # Index of data to end at, used only for test and inference
+
+model:
+  model_name: meta-llama/Meta-Llama-3.1-8B-Instruct
+  load_in_4bit: True # Use 4bit quantization to reduce memory usage. 
+  lora_r: 128 
+  lora_scaling: 2
+  lora_dropout: 0.0
+
+trainer:
+  max_seq_length: 4096
+  epochs: 3
+  learning_rate: 0.0001
+  seed: 0
+  per_device_train_batch_size: 8 
+
+test:
+  max_new_tokens: 1024
+  max_length: 7000
+  top_p: 0.5
+  temperature: 0.5
+
+templates_path: configs/example/templates.yaml 
+  
+# `exp_name` contains the directory name for the saved model if we train the model
+exp_name: example/llama3.1-8b
+zero_shot: False 
+save_only_necessary_cols: True
+report_text_col: "Report Text"
+save_path: outputs
+verbose: False
+metrics: ["F1", "Precision", "Recall"]
+use_test_set: False

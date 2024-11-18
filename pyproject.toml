@@ -1,0 +1,38 @@
+[project]
+name = "strata"
+version = "0.0.1"
+authors = [
+]
+description = "Fine-tuning LLMs for medical applications."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "pandas",
+  "datasets",
+  "openpyxl",
+  "scikit-learn",
+  "easydict",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+huggingface = [
+    "tyro",
+    "transformers>=4.38.2",
+    "datasets>=2.16.0",
+    "sentencepiece>=0.2.0",
+    "tqdm",
+    "psutil",
+    "wheel>=0.42.0",
+    "numpy",
+    "accelerate>=0.26.1",
+    "trl>=0.7.9",
+    "peft>=0.7.1",
+    "protobuf<4.0.0",
+]

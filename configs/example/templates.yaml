@@ -1,0 +1,13 @@
+source:
+  question: "What are the tissue sources that are investigated in this report?\nPlease output your answer in json format: {\"left\": __, \"right\": __}, where each blank is filled in by \"1\" if the corresponding tissue is examined, and \"0\" if not. \"left\" indicates the left breast, and \"right\" indicates the right breast.\nProvide your answer in the required format. Do not provide explanations or output anything else."
+  gt_columns: ["Source_LB", "Source_RB"]
+  parse_response: "parse_functions/example/source.py"
+  preamble: "You are an experienced pathologist. Answer the question using the pathology report below. Base the answer on the report only. Do not add any additional information."
+  response_start: "My answer is:"
+  question_name: "Source"
+
+cancer:
+  question: "Is there cancer diagnosed in this report? If so, what is the laterality of the cancer? \nYour answer should be in json format: {\"left\": __, \"right\": __}, where each blank is filled in by \"1\" if any cancer is diagnosed, \"0\" if the tissue is benign, and \"-1\" if the tissue is not mentioned. \"left\" indicates the left breast, and \"right\" indicates the right breast.\nProvide your answer in the required format. Do not provide explanations or output anything else."
+  gt_columns: ["Cancer_LB", "Cancer_RB"]
+  parse_response: "parse_functions/example/cancer.py"
+  question_name: "Cancer"

@@ -52,7 +52,7 @@ pre-commit install
 
 ## Problem Definition 
 ### Data Preprocessing
-To use this library, please preprocess your data into CSV format and include only the following columns: `"Accession Number"`, `"Report Text"`, and ground truth values (inference will run without ground truth labels, but they are required for training and evaluation). 
+To use this library, please preprocess your data into CSV format, with each row representing a different report. Include only the following columns: `"Accession Number"`, `"Report Text"`, and ground truth values (inference will run without ground truth labels, but they are required for training and evaluation). If a report has "missing" labels, the report will be excluded from fine-tuning for only the questions corresponding to the missing values. "Missing" is defined as `NaN` in numeric arrays and `None` in object arrays. 
 
 You can reference synthetic example data at [train_0.8_0.1_0.1_0.csv](example_data/train_0.8_0.1_0.1_0.csv). In addition to the accession numbers and report texts, we have ground truth labels for two tasks: tissue source and cancer diagnosis. The tissue source can be any combination of left breast and right breast. In the columns `Source_LB` and `Source_RB`, the value is `1` if the tissue is examined and `0` if it is absent. In the columns `Source_LB` and `Source_RB`, the value is `1` if a tissue source is examined and cancer is deterministically diagnosed and `0` otherwise.
 
@@ -162,7 +162,9 @@ done
 Set `use_test_set` in the config to True. The library will generate the predictions for the report texts at `args.data.test_set_data_path`, and the saved csvs will have suffix `_test_set`.
 
 ### Evaluation
-By default Strata will calculate the exact match, F1, precision, and recall scores. The function should be defined according to the following docstring: 
+By default Strata will calculate the exact match, F1, precision, and recall scores. String labels will treated as categorical variables, with each unique string as a different category. Numeric labels do not undergo any processing. 
+
+Custom metrics should be defined according to the following docstring: 
 
 ```python
 def metric(gt_column, pred_column, inference_results_df):

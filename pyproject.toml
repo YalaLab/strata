@@ -15,6 +15,8 @@ dependencies = [
   "openpyxl",
   "scikit-learn",
   "easydict",
+  "click", 
+  "huggingface_hub==0.25.1",
 ]
 
 [build-system]
@@ -26,7 +28,6 @@ huggingface = [
     "tyro",
     "transformers>=4.38.2",
     "datasets>=2.16.0",
-    "huggingface-hub<=0.25.1",
     "sentencepiece>=0.2.0",
     "tqdm",
     "psutil",

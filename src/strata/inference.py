@@ -388,7 +388,7 @@ def evaluate(
                 )
                 continue
 
-            if any([np.isnan(inference_result[col]) for col in gt_columns]):
+            if any([pd.isna(inference_result[col]) for col in gt_columns]):
                 continue
 
             # load pred and gt columns from inference results

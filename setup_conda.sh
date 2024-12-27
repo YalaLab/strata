@@ -9,7 +9,7 @@ conda activate strata
 
 pip install "unsloth[cu121-ampere-torch230] @ git+https://github.com/unslothai/unsloth.git@0376b81364ad036d8fc2236c9e9fc13c9b1afe3d"
 
-pip install --no-deps "trl<0.9.0" peft accelerate bitsandbytes
+pip install --no-deps "trl<0.9.0" peft "accelerate==0.34.2" "bitsandbytes==0.44.1"
 
 pip install -e . -v
 

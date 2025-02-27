@@ -163,6 +163,7 @@ wandb
 outputs 
 extractions 
 preprocessing
+unsloth_compiled_cache
 
 outputs*
 *_ignored*

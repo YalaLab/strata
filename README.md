@@ -2,7 +2,7 @@
 
 ![Strata Usage](figures/strata_usage.png)
 
-### By Longchao Liu and Long Lian
+### By Joy Liu <img src="figures/profile_photos/longchaoliu.png" width="20"> and Tony Lian <img src="figures/profile_photos/longlian.png" width="20">  
 
 Strata is an open-source, low-code library designed to streamline the fine-tuning, evaluation, and deployment of large language models (LLMs) for extracting structured data from free-text clinical reports. It enables researchers to easily customize LLMs for clinical information extraction, reducing the need for extensive manual annotation. Strata supports local model hosting, ensuring privacy, reproducibility, and control over model versions. By simplifying the customization process and requiring minimal computational resources, Strata accelerates the development of AI tools for clinical research, making it more accessible to users with limited technical expertise. Strata leverages the [Hugging Face Transformers](https://huggingface.co/transformers/) library and [unsloth](https://unsloth.ai/) library for implementations of LLMs and efficient fine-tuning.
 
@@ -55,9 +55,7 @@ pre-commit install
 ## Problem Definition 
 ### Data Preprocessing
 
-Strata supports data in the CSV and JSON formats. 
-
-The following script may be used to split data into training, validation, and test sets: [split_data.py](scripts/split_data.py), with bash command [run_split.sh](scripts/run_split.sh). 
+Strata supports data in the CSV and JSON formats. We've created an illustrative example dataset, with versions in both formats. Please note that all data is **synthetic**, for the **sole purpose** of demonstrating how to use Strata. 
 
 #### CSV
 Please preprocess your data into CSV format and include only the following columns: `"Accession Number"`, `"Report Text"`, and ground truth values (inference will run without ground truth labels, but they are required for training and evaluation). 
@@ -96,6 +94,8 @@ Similarly to CSV, the JSON should contain `"Accession Number"`, `"Report Text"`,
 ```
 You can reference additional synthetic example data at [train_0.8_0.1_0.1_0.json](example_data/train_0.8_0.1_0.1_0.json)
 
+#### Splits 
+The following script may be used to split data into training, validation, and test sets: [split_data.py](scripts/split_data.py), with bash command [run_split.sh](scripts/run_split.sh). 
 
 ### Prompt Creation
 In the dataset above, we care about two tasks: the tissue source and the cancer diagnosis associated with each report text. Each task should be defined by i) a question to the model, ii) the corresponding ground truth labels, which can be in any number of columns, and iii) parse functions, which convert the ground truth labels to the intended LLM response and vice versa. The template file should be formatted as follows: 

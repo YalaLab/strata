@@ -1,8 +1,8 @@
 # Strata: human-level information extraction from clinical reports with fine-tuned language models
 
+### By Joy Liu <img src="figures/profile_photos/longchaoliu.png" width="25"> and Tony Lian <img src="figures/profile_photos/longlian.png" width="25">  
 ![Strata Usage](figures/strata_usage.png)
 
-### By Joy Liu <img src="figures/profile_photos/longchaoliu.png" width="20"> and Tony Lian <img src="figures/profile_photos/longlian.png" width="20">  
 
 Strata is an open-source, low-code library designed to streamline the fine-tuning, evaluation, and deployment of large language models (LLMs) for extracting structured data from free-text clinical reports. It enables researchers to easily customize LLMs for clinical information extraction, reducing the need for extensive manual annotation. Strata supports local model hosting, ensuring privacy, reproducibility, and control over model versions. By simplifying the customization process and requiring minimal computational resources, Strata accelerates the development of AI tools for clinical research, making it more accessible to users with limited technical expertise. Strata leverages the [Hugging Face Transformers](https://huggingface.co/transformers/) library and [unsloth](https://unsloth.ai/) library for implementations of LLMs and efficient fine-tuning.
 

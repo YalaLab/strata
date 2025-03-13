@@ -1,0 +1,52 @@
+[
+    {
+        "Accession Number": 865284,
+        "Report Text": "Patient Name: Charlotte Rodriguez\nAge: 27 years\nSex: Female\nLeft breast findings: Benign-appearing mass. No calcifications. Global asymmetry. Skin thickening.\nNo suspicious lesions identified in right breast.\nHormone Therapy: No current hormone therapy\nFamily History: Positive family history of breast cancer\nRoutine screening mammogram recommended in 1 year.\nRight breast not examined.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nLeft breast examined:\nNo suspicious lesions identified in left breast.\nBreast Density: b) Scattered areas of fibroglandular density\nPrevious Biopsies: No previous breast biopsies",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 249416,
+        "Report Text": "Patient Name: Sophia Johnson\nAge: 68 years\nSex: Male\nLeft breast findings: No masses. Suspicious calcifications. Focal asymmetry. Skin retraction.\nNo suspicious lesions identified in right breast.\nRoutine screening mammogram recommended in 1 year.\nLeft breast examined:\nFamily History: Positive family history of breast cancer\nHormone Therapy: Current hormone therapy\nBreast Density: d) Extremely dense\nPrevious Biopsies: No previous breast biopsies\nDense breast tissue may lower the sensitivity of mammography.\nNo suspicious lesions identified in left breast.\nRight breast not examined.",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 599748,
+        "Report Text": "Patient Name: Ava Jackson\nAge: 45 years\nSex: Female\nFamily History: Positive family history of breast cancer\nFollow-up mammogram recommended in 6 months.\nHormone Therapy: No current hormone therapy\nLeft breast examined:\nSuspicious lesion identified in right breast, further investigation recommended.\nAdditional ultrasound imaging may provide further clarification.\nBreast Density: b) Scattered areas of fibroglandular density\nLeft breast findings: Suspicious mass. Suspicious calcifications. Focal asymmetry. Skin thickening.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nRight breast findings: Suspicious mass. Suspicious calcifications. Focal asymmetry. Skin thickening.\nPrevious Biopsies: Previous breast biopsies\nSuspicious lesion identified in left breast, biopsy advised.\nRight breast examined.",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1, \"Left Breast\": 1}"
+    },
+    {
+        "Accession Number": 435601,
+        "Report Text": "Patient Name: Benjamin Gonzalez\nAge: 70 years\nSex: Female\nFamily History: No family history of breast cancer\nLeft breast examined:\nPrevious Biopsies: Previous breast biopsies\nHormone Therapy: Current hormone therapy\nBreast Density: a) Almost entirely fatty\nRoutine screening mammogram recommended in 1 year.\nNo suspicious lesions identified in right breast.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nLeft breast findings: Benign-appearing mass. No calcifications. No asymmetries. No skin changes.\nRight breast not examined.\nNo suspicious lesions identified in left breast.",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 446236,
+        "Report Text": "Patient Name: Mia Wilson\nAge: 44 years\nSex: Male\nNo suspicious lesions identified in left breast.\nSuspicious lesion identified in right breast, further investigation recommended.\nLeft breast findings: Suspicious mass. No calcifications. No asymmetries. Skin retraction.\nFamily History: No family history of breast cancer\nRight breast examined.\nRight breast findings: Suspicious mass. No calcifications. No asymmetries. Skin retraction.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nFollow-up mammogram recommended in 6 months.\nBreast Density: a) Almost entirely fatty\nAdditional ultrasound imaging may provide further clarification.\nPrevious Biopsies: No previous breast biopsies\nHormone Therapy: Current hormone therapy\nLeft breast examined:",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1, \"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 246039,
+        "Report Text": "Patient Name: Harper Taylor\nAge: 46 years\nSex: Female\nRight breast not examined.\nHormone Therapy: Current hormone therapy\nFamily History: No family history of breast cancer\nRoutine screening mammogram recommended in 1 year.\nLeft breast not examined.\nPrevious Biopsies: Previous breast biopsies\nAdditional ultrasound imaging may provide further clarification.\nDense breast tissue may lower the sensitivity of mammography.\nBreast Density: d) Extremely dense\nPatient reported breast pain, which is likely unrelated to imaging findings.\nNo suspicious lesions identified in right breast.\nNo suspicious lesions identified in left breast.",
+        "Cancer_Diagnosis": "{}"
+    },
+    {
+        "Accession Number": 101198,
+        "Report Text": "Patient Name: Alexander Rodriguez\nAge: 21 years\nSex: Female\nSuspicious lesion identified in right breast, further investigation recommended.\nFamily History: No family history of breast cancer\nPrevious Biopsies: Previous breast biopsies\nFollow-up mammogram recommended in 6 months.\nBreast Density: a) Almost entirely fatty\nLeft breast findings: No masses. Benign-appearing calcifications. Global asymmetry. No skin changes.\nRight breast examined.\nRight breast findings: No masses. Benign-appearing calcifications. Global asymmetry. No skin changes.\nAdditional ultrasound imaging may provide further clarification.\nLeft breast examined:\nNo suspicious lesions identified in left breast.\nHormone Therapy: Current hormone therapy",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1, \"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 949574,
+        "Report Text": "Patient Name: Benjamin Thomas\nAge: 44 years\nSex: Male\nLeft breast examined:\nNo suspicious lesions identified in left breast.\nBreast Density: a) Almost entirely fatty\nNo suspicious lesions identified in right breast.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nPrevious Biopsies: Previous breast biopsies\nLeft breast findings: No masses. Suspicious calcifications. No asymmetries. Skin thickening.\nAdditional ultrasound imaging may provide further clarification.\nFamily History: No family history of breast cancer\nRight breast not examined.\nRoutine screening mammogram recommended in 1 year.\nHormone Therapy: Current hormone therapy",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 300348,
+        "Report Text": "Patient Name: Liam Williams\nAge: 59 years\nSex: Male\nNo suspicious lesions identified in left breast.\nRight breast examined.\nBreast Density: c) Heterogeneously dense\nRight breast findings: Benign-appearing mass. No calcifications. Global asymmetry. Skin retraction.\nHormone Therapy: No current hormone therapy\nDense breast tissue may lower the sensitivity of mammography.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nPrevious Biopsies: No previous breast biopsies\nLeft breast not examined.\nNo suspicious lesions identified in right breast.\nRoutine screening mammogram recommended in 1 year.\nFamily History: Positive family history of breast cancer",
+        "Cancer_Diagnosis": "{\"Right Breast\": 0}"
+    },
+    {
+        "Accession Number": 314410,
+        "Report Text": "Patient Name: Isabella Miller\nAge: 71 years\nSex: Female\nRight breast findings: Suspicious mass. Suspicious calcifications. No asymmetries. Skin retraction.\nBreast Density: b) Scattered areas of fibroglandular density\nSuspicious lesion identified in right breast, further investigation recommended.\nLeft breast examined:\nPrevious Biopsies: Previous breast biopsies\nAdditional ultrasound imaging may provide further clarification.\nRight breast examined.\nSuspicious lesion identified in left breast, biopsy advised.\nFollow-up mammogram recommended in 6 months.\nLeft breast findings: Suspicious mass. Suspicious calcifications. No asymmetries. Skin retraction.\nHormone Therapy: Current hormone therapy\nFamily History: No family history of breast cancer",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1, \"Left Breast\": 1}"
+    }
+]

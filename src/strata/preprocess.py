@@ -12,6 +12,12 @@ def read_df(path):
     if path is None:
         return None
     suffix = path.split(".")[-1]
+
+    if suffix == "json":
+        with open(path, "r") as f:
+            dataset = json.load(f)
+        return pd.json_normalize(dataset, max_level=0)
+
     if suffix == "csv":
         return pd.read_csv(path)
     elif suffix == "xlsx":
@@ -40,7 +46,7 @@ def preprocess_sample(sample, questions_dict, templates_dict, report_text_col):
         prompt = prompt_framework.format(report=report_text, question=question)
 
         gt = OrderedDict([(col, sample[col]) for col in template["gt_columns"]])
-        if any([np.isnan(sample[key]) for key in gt]):
+        if any([pd.isna(sample[key]) for key in gt]):
             continue
 
         gt_to_response = load_function_from_file(

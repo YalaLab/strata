@@ -2,15 +2,17 @@ import pandas as pd
 import argparse
 import random
 import os
+import json
+
 # Example:
-# python split_data.py --dataset_csv /mnt/shareddata/datasets/strata_datav2/mds/full.csv --train 0.4 --val 0.3 --test 0.3 --seed 0 --output_dir /mnt/shareddata/datasets/strata_datav2/mds/
+# python scripts/split_data.py --dataset example_data/random_medical_data.csv --columns "Accession Number" --train 0.8 --val 0.1 --test 0.1 --seed 0 --output_dir example_data/
 
 parser = argparse.ArgumentParser(
-    description="Read and split a CSV dataset into train, validation, and test sets"
+    description="Read and split a CSV or Json dataset into train, validation, and test sets"
 )
 
 parser.add_argument(
-    "--dataset_csv", type=str, required=True, help="Path to the CSV file"
+    "--dataset", type=str, required=True, help="Path to the full dataset file"
 )
 parser.add_argument(
     "--train", type=float, required=True, help="Proportion of data to use for training"
@@ -42,37 +44,59 @@ args = parser.parse_args()
 if args.train + args.val + args.test != 1.0:
     raise ValueError("Train, val, and test proportions must sum to 1")
 
-df = pd.read_csv(args.dataset_csv)
+filetype = args.dataset.split(".")[-1]
 
 random.seed(args.seed)
-
-columns = args.columns.split(",")
-columns = [col.strip() for col in columns]
-df = df[df[columns].notna().any(axis=1)].reset_index(drop=True)
-df = df.sample(frac=1, random_state=args.seed).reset_index(drop=True)
-
-train_end = int(args.train * len(df))
-val_end = train_end + int(args.val * len(df))
-
-train_df = df.iloc[:train_end]
-val_df = df.iloc[train_end:val_end]
-test_df = df.iloc[val_end:]
-
-print(f"Training set size: {len(train_df)}")
-print(f"Validation set size: {len(val_df)}")
-print(f"Test set size: {len(test_df)}")
-
+os.makedirs(args.output_dir, exist_ok=True)
 suffix = f"_{args.train}_{args.val}_{args.test}_{args.seed}"
 
-os.makedirs(args.output_dir, exist_ok=True)
-
-train_path = os.path.join(args.output_dir, f"train{suffix}.csv")
+train_path = os.path.join(args.output_dir, f"train{suffix}.{filetype}")
 if not args.overwrite:
     assert not os.path.exists(train_path), f"File already exists: {train_path}"
-train_df.to_csv(train_path, index=False)
+val_path = os.path.join(args.output_dir, f"val{suffix}.{filetype}")
+test_path = os.path.join(args.output_dir, f"test{suffix}.{filetype}")
 
-val_path = os.path.join(args.output_dir, f"val{suffix}.csv")
-val_df.to_csv(val_path, index=False)
+if filetype == "csv":
+    df = pd.read_csv(args.dataset)
 
-test_path = os.path.join(args.output_dir, f"test{suffix}.csv")
-test_df.to_csv(test_path, index=False)
+    columns = args.columns.split(",")
+    columns = [col.strip() for col in columns]
+    df = df[df[columns].notna().any(axis=1)].reset_index(drop=True)
+    df = df.sample(frac=1, random_state=args.seed).reset_index(drop=True)
+
+    train_end = int(args.train * len(df))
+    val_end = train_end + int(args.val * len(df))
+
+    train_dataset = df.iloc[:train_end]
+    val_dataset = df.iloc[train_end:val_end]
+    test_dataset = df.iloc[val_end:]
+
+    train_dataset.to_csv(train_path, index=False)
+    val_dataset.to_csv(val_path, index=False)
+    test_dataset.to_csv(test_path, index=False)
+elif filetype == "json":
+    with open(args.dataset, "r") as f:
+        dataset = json.load(f)
+
+    random.shuffle(dataset)
+    train_end = int(args.train * len(dataset))
+    val_end = train_end + int(args.val * len(dataset))
+
+    train_dataset = dataset[:train_end]
+    val_dataset = dataset[train_end:val_end]
+    test_dataset = dataset[val_end:]
+
+    def save_json(data, filename):
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4)
+
+    save_json(train_dataset, train_path)
+    save_json(val_dataset, val_path)
+    save_json(test_dataset, test_path)
+else:
+    raise Exception(f"File type {filetype} not supported")
+
+
+print(f"Training set size: {len(train_dataset)}")
+print(f"Validation set size: {len(val_dataset)}")
+print(f"Test set size: {len(test_dataset)}")

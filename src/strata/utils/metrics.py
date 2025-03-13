@@ -1,19 +1,16 @@
 from sklearn.metrics import f1_score, precision_score, recall_score
 import pandas as pd
 
-
 def map_to_categorical(gt, pred):
     """
     Maps ground truth (gt) and predictions (pred) to the same categorical integer codes,
     only if they are not already integers.
-
     Parameters
     ----------
     gt : pd.Series
         The ground truth values.
     pred : pd.Series
         The prediction values.
-
     Returns
     -------
     pd.Series, pd.Series
@@ -37,7 +34,6 @@ def F1(gt_column, pred_column, inference_results_df):
     """
     Computes the F1 score, with support for categorical ground truth and predictions.
     Ensures consistent mapping between ground truth and predictions, only if needed.
-
     Parameters
     ----------
     gt_column : str
@@ -46,7 +42,6 @@ def F1(gt_column, pred_column, inference_results_df):
         The column name for the predicted values in the DataFrame.
     inference_results_df : pd.DataFrame
         The DataFrame containing the ground truth and prediction columns.
-
     Returns
     -------
     float
@@ -56,7 +51,6 @@ def F1(gt_column, pred_column, inference_results_df):
     keep_if_labeled = ~inference_results_df[gt_column].isna()
     gt = inference_results_df[gt_column][keep_if_labeled]
     pred = inference_results_df[pred_column][keep_if_labeled]
-
     # Map ground truth and predictions to categorical integer codes, if needed
     gt_mapped, pred_mapped = map_to_categorical(gt, pred)
 
@@ -71,7 +65,6 @@ def Precision(gt_column, pred_column, inference_results_df):
     """
     Computes the precision score, with support for categorical ground truth and predictions.
     Ensures consistent mapping between ground truth and predictions, only if needed.
-
     Parameters
     ----------
     gt_column : str
@@ -80,7 +73,6 @@ def Precision(gt_column, pred_column, inference_results_df):
         The column name for the predicted values in the DataFrame.
     inference_results_df : pd.DataFrame
         The DataFrame containing the ground truth and prediction columns.
-
     Returns
     -------
     float
@@ -90,7 +82,6 @@ def Precision(gt_column, pred_column, inference_results_df):
     keep_if_labeled = ~inference_results_df[gt_column].isna()
     gt = inference_results_df[gt_column][keep_if_labeled]
     pred = inference_results_df[pred_column][keep_if_labeled]
-
     # Map ground truth and predictions to categorical integer codes, if needed
     gt_mapped, pred_mapped = map_to_categorical(gt, pred)
 
@@ -105,7 +96,6 @@ def Recall(gt_column, pred_column, inference_results_df):
     """
     Computes the recall score, with support for categorical ground truth and predictions.
     Ensures consistent mapping between ground truth and predictions, only if needed.
-
     Parameters
     ----------
     gt_column : str
@@ -114,7 +104,6 @@ def Recall(gt_column, pred_column, inference_results_df):
         The column name for the predicted values in the DataFrame.
     inference_results_df : pd.DataFrame
         The DataFrame containing the ground truth and prediction columns.
-
     Returns
     -------
     float
@@ -124,7 +113,6 @@ def Recall(gt_column, pred_column, inference_results_df):
     keep_if_labeled = ~inference_results_df[gt_column].isna()
     gt = inference_results_df[gt_column][keep_if_labeled]
     pred = inference_results_df[pred_column][keep_if_labeled]
-
     # Map ground truth and predictions to categorical integer codes, if needed
     gt_mapped, pred_mapped = map_to_categorical(gt, pred)
 

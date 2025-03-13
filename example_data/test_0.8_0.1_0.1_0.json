@@ -1,0 +1,52 @@
+[
+    {
+        "Accession Number": 923182,
+        "Report Text": "Patient Name: Mason Lopez\nAge: 60 years\nSex: Female\nBreast Density: c) Heterogeneously dense\nDense breast tissue may lower the sensitivity of mammography.\nPrevious Biopsies: No previous breast biopsies\nFollow-up mammogram recommended in 6 months.\nSuspicious lesion identified in right breast, further investigation recommended.\nAdditional ultrasound imaging may provide further clarification.\nRight breast examined.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nSuspicious lesion identified in left breast, biopsy advised.\nRight breast findings: Benign-appearing mass. No calcifications. No asymmetries. Skin thickening.\nFamily History: Positive family history of breast cancer\nHormone Therapy: No current hormone therapy\nLeft breast findings: Benign-appearing mass. No calcifications. No asymmetries. Skin thickening.\nLeft breast examined:",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1, \"Left Breast\": 1}"
+    },
+    {
+        "Accession Number": 687007,
+        "Report Text": "Patient Name: Lucas Gonzalez\nAge: 20 years\nSex: Female\nFollow-up mammogram recommended in 6 months.\nLeft breast findings: Benign-appearing mass. Benign-appearing calcifications. Focal asymmetry. No skin changes.\nFamily History: No family history of breast cancer\nPrevious Biopsies: No previous breast biopsies\nLeft breast examined:\nNo suspicious lesions identified in right breast.\nRight breast findings: Benign-appearing mass. Benign-appearing calcifications. Focal asymmetry. No skin changes.\nHormone Therapy: Current hormone therapy\nSuspicious lesion identified in left breast, biopsy advised.\nRight breast examined.\nBreast Density: a) Almost entirely fatty\nAdditional ultrasound imaging may provide further clarification.",
+        "Cancer_Diagnosis": "{\"Right Breast\": 0, \"Left Breast\": 1}"
+    },
+    {
+        "Accession Number": 165304,
+        "Report Text": "Patient Name: Noah Jackson\nAge: 59 years\nSex: Male\nDense breast tissue may lower the sensitivity of mammography.\nBreast Density: d) Extremely dense\nRight breast not examined.\nNo suspicious lesions identified in left breast.\nNo suspicious lesions identified in right breast.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nHormone Therapy: Current hormone therapy\nFamily History: No family history of breast cancer\nLeft breast examined:\nRoutine screening mammogram recommended in 1 year.\nLeft breast findings: Benign-appearing mass. No calcifications. Global asymmetry. No skin changes.\nPrevious Biopsies: No previous breast biopsies",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 800609,
+        "Report Text": "Patient Name: Harper Martinez\nAge: 51 years\nSex: Male\nRight breast findings: No masses. Benign-appearing calcifications. Global asymmetry. No skin changes.\nDense breast tissue may lower the sensitivity of mammography.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nBreast Density: d) Extremely dense\nNo suspicious lesions identified in left breast.\nRoutine screening mammogram recommended in 1 year.\nNo suspicious lesions identified in right breast.\nFamily History: No family history of breast cancer\nPrevious Biopsies: No previous breast biopsies\nLeft breast not examined.\nHormone Therapy: Current hormone therapy\nRight breast examined.",
+        "Cancer_Diagnosis": "{\"Right Breast\": 0}"
+    },
+    {
+        "Accession Number": 741620,
+        "Report Text": "Patient Name: Noah Taylor\nAge: 77 years\nSex: Female\nPrevious Biopsies: No previous breast biopsies\nRight breast examined.\nFamily History: Positive family history of breast cancer\nFollow-up mammogram recommended in 6 months.\nNo suspicious lesions identified in left breast.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nBreast Density: c) Heterogeneously dense\nRight breast findings: No masses. Benign-appearing calcifications. Global asymmetry. Skin retraction.\nDense breast tissue may lower the sensitivity of mammography.\nLeft breast not examined.\nHormone Therapy: No current hormone therapy\nSuspicious lesion identified in right breast, further investigation recommended.",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1}"
+    },
+    {
+        "Accession Number": 177324,
+        "Report Text": "Patient Name: Ethan Taylor\nAge: 24 years\nSex: Male\nFamily History: Positive family history of breast cancer\nRight breast not examined.\nNo suspicious lesions identified in right breast.\nPatient reported breast pain, which is likely unrelated to imaging findings.\nPrevious Biopsies: Previous breast biopsies\nLeft breast findings: Suspicious mass. Benign-appearing calcifications. Global asymmetry. No skin changes.\nHormone Therapy: No current hormone therapy\nLeft breast examined:\nNo suspicious lesions identified in left breast.\nBreast Density: b) Scattered areas of fibroglandular density\nRoutine screening mammogram recommended in 1 year.",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 371493,
+        "Report Text": "Patient Name: James Jackson\nAge: 80 years\nSex: Male\nSuspicious lesion identified in right breast, further investigation recommended.\nRight breast examined.\nLeft breast examined:\nPrevious Biopsies: No previous breast biopsies\nLeft breast findings: No masses. No calcifications. Global asymmetry. Skin thickening.\nHormone Therapy: Current hormone therapy\nFamily History: Positive family history of breast cancer\nFollow-up mammogram recommended in 6 months.\nNo suspicious lesions identified in left breast.\nRight breast findings: No masses. No calcifications. Global asymmetry. Skin thickening.\nBreast Density: a) Almost entirely fatty",
+        "Cancer_Diagnosis": "{\"Right Breast\": 1, \"Left Breast\": 0}"
+    },
+    {
+        "Accession Number": 675352,
+        "Report Text": "Patient Name: Benjamin Brown\nAge: 65 years\nSex: Female\nNo suspicious lesions identified in left breast.\nHormone Therapy: Current hormone therapy\nRight breast examined.\nRoutine screening mammogram recommended in 1 year.\nRight breast findings: Benign-appearing mass. Suspicious calcifications. Global asymmetry. No skin changes.\nDense breast tissue may lower the sensitivity of mammography.\nFamily History: No family history of breast cancer\nBreast Density: c) Heterogeneously dense\nNo suspicious lesions identified in right breast.\nLeft breast not examined.\nPrevious Biopsies: No previous breast biopsies",
+        "Cancer_Diagnosis": "{\"Right Breast\": 0}"
+    },
+    {
+        "Accession Number": 666528,
+        "Report Text": "Patient Name: Olivia Garcia\nAge: 44 years\nSex: Male\nRight breast not examined.\nDense breast tissue may lower the sensitivity of mammography.\nRoutine screening mammogram recommended in 1 year.\nFamily History: Positive family history of breast cancer\nAdditional ultrasound imaging may provide further clarification.\nHormone Therapy: No current hormone therapy\nPrevious Biopsies: No previous breast biopsies\nBreast Density: d) Extremely dense\nNo suspicious lesions identified in right breast.\nLeft breast not examined.\nNo suspicious lesions identified in left breast.",
+        "Cancer_Diagnosis": "{}"
+    },
+    {
+        "Accession Number": 646678,
+        "Report Text": "Patient Name: James Brown\nAge: 50 years\nSex: Male\nFamily History: No family history of breast cancer\nPrevious Biopsies: No previous breast biopsies\nRight breast not examined.\nNo suspicious lesions identified in right breast.\nLeft breast findings: Suspicious mass. Suspicious calcifications. No asymmetries. No skin changes.\nNo suspicious lesions identified in left breast.\nRoutine screening mammogram recommended in 1 year.\nBreast Density: a) Almost entirely fatty\nLeft breast examined:\nHormone Therapy: Current hormone therapy\nPatient reported breast pain, which is likely unrelated to imaging findings.\nAdditional ultrasound imaging may provide further clarification.",
+        "Cancer_Diagnosis": "{\"Left Breast\": 0}"
+    }
+]

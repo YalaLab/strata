@@ -1,6 +1,7 @@
 # Strata: human-level information extraction from clinical reports with fine-tuned language models
 
-### By Joy Liu <img src="figures/profile_photos/longchaoliu.png" width="25"> and Tony Lian <img src="figures/profile_photos/longlian.png" width="25">  
+[Longchao Liu*](), [Long Lian*](https://tonylian.com/), [Yiyan Hao](), [Aidan Pace](), [Elaine Kim](), [Nour Homsi](), [Yash Pershad](), [Liheng Lai](), [Thomas Gracie](), [Ashwin Kishtagari](), [Peter R Carroll](), [Alexander G Bick](), [Anobel Y Odisho](), [Maggie Chung](), [Adam Yala](https://www.adamyala.org/) 
+ 
 ![Strata Usage](figures/strata_usage.png)
 
 

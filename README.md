@@ -59,13 +59,13 @@ Strata supports data in the CSV and JSON formats. We've created an illustrative 
 
 #### CSV
 Please preprocess your data into CSV format and include only the following columns: `"Accession Number"`, `"Report Text"`, and ground truth values (inference will run without ground truth labels, but they are required for training and evaluation). 
-```
-Accession Number | Report Text | Source_RB | Source_LB | Cancer_RB | Cancer_LB
------------------|-------------|-----------|-----------|-----------|-----------
-     985440      |     ...     |     1     |     0     |     1     |     0
-     503958      |     ...     |     1     |     1     |     0     |     1
-     894772      |     ...     |     0     |     0     |     0     |     0
-```
+
+|Accession Number | Report Text | Source_RB | Source_LB | Cancer_RB | Cancer_LB
+|-----------------|-------------|-----------|-----------|-----------|-----------
+|     985440      |     ...     |     1     |     0     |     1     |     0
+|     503958      |     ...     |     1     |     1     |     0     |     1
+|     894772      |     ...     |     0     |     0     |     0     |     0
+
 
 In addition to the accession numbers and report texts, we have ground truth labels for two tasks: tissue source and cancer diagnosis. The tissue source can be any combination of left breast and right breast. In the columns `Source_LB` and `Source_RB`, the value is `1` if the tissue is examined and `0` if it is absent. In the columns `Cancer_LB` and `Cancer_RB`, the value is `1` if a tissue source is examined and cancer is deterministically diagnosed and `0` otherwise.
 
@@ -184,7 +184,7 @@ Questions to be included in fine-tuning can be selected in `args.data.questions`
 
 Using the same config, the library will load the fine-tuned model checkpoint and evaluate the accuracy on `args.data.val_set_data_path`. 
 ```sh
-python -m strata.main test configs/example/llama3.1-8b.yaml --inference-mode fine-tuned --opts exp_name example/llama3.1-8b-ft
+python -m strata.main test configs/example/llama3.1-8b.yaml --inference-mode fine-tuned --load-fine-tuned-model outputs/example/llama3.1-8b-ft --opts exp_name example/llama3.1-8b-ft
 ```
 As in zero-shot, four files will be saved at `outputs/example/llama3.1-8b-ft`: `inference.csv` contains the predicted responses of the model, `eval.csv` contains the comparisons with the ground truth labels, and `scores.csv` and `scores_per_column.csv` contain the evaluation metrics per question and per column respectively.
 
@@ -236,7 +236,7 @@ Custom metrics can be added to [metrics.py](src/strata/utils/metrics.py), which 
 ### Inference 
 To predict the labels for the test set when the ground truth is unknown, `inference` mode and `use_test_set` should be used. The library will generate the predictions for the report texts at `args.data.test_set_data_path`, saving them under `args.save_path`.
 ```sh
-python -m strata.main inference configs/example/llama3.1-8b.yaml --inference-mode fine-tuned --opts exp_name example/llama3.1-8b-ft use_test_set True 
+python -m strata.main inference configs/example/llama3.1-8b.yaml --inference-mode fine-tuned --load-fine-tuned-model outputs/example/llama3.1-8b-ft --opts exp_name example/llama3.1-8b-ft use_test_set True 
 ```
 
 ## Examples
@@ -273,7 +273,7 @@ python -m strata.main train configs/example/llama3.1-8b.yaml --opts exp_name exa
 
 Finally, try the new checkpoint on the val set. It should take a few minutes to run.
 ```sh
-python -m strata.main test configs/example/llama3.1-8b.yaml --inference-mode fine-tuned --opts exp_name example/llama3.1-8b-ft
+python -m strata.main test configs/example/llama3.1-8b.yaml --inference-mode fine-tuned --load-fine-tuned-model outputs/example/llama3.1-8b-ft --opts exp_name example/llama3.1-8b-ft
 ```
 
 The results should now be:
@@ -309,7 +309,7 @@ python -m strata.main train configs/example/llama3.1-8b_json.yaml --opts exp_nam
 
 Finally, test out the fine-tuned model: 
 ```sh
-python -m strata.main test configs/example/llama3.1-8b_json.yaml --inference-mode fine-tuned --opts exp_name example/llama3.1-8b-ft_json
+python -m strata.main test configs/example/llama3.1-8b_json.yaml --inference-mode fine-tuned --load-fine-tuned-model outputs/example/llama3.1-8b-ft_json --opts exp_name example/llama3.1-8b-ft_json
 ```
 
 The model now has perfect accuracy on the val set, indicating that the fine-tuning process greatly improved the model's performance:
